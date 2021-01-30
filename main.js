@@ -42,7 +42,13 @@ function handleTicketChange(ticket ,isIncrease){
 const bookNowBtn = document.getElementById('book-now');
 bookNowBtn.addEventListener('click', function(){
     document.getElementById('bookingInfo').style.display = 'none';
-    document.getElementById('welcomeMsg').style.display = 'block';
+    document.getElementById('welcomeMessage').style.display = 'block';
     document.getElementById('firstClassTicket').innerText = inputTicketNumber('firstClass');
     document.getElementById('economyTicket').innerText = inputTicketNumber('economy'); 
 })
+
+const backBtn = document.getElementById('back');
+     backBtn.addEventListener('click', function(){
+         document.getElementById('welcomeMessage').style.display = 'none';
+         document.getElementById('bookingInfo').style.display = 'block';
+     })
